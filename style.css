@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Montserrat', sans-serif;
+  /* color:black; */
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+
+.nav{
+  height:6vh;
+  background-color:whitesmoke;
+
+}
+
+
+.nav .lang{
+  display:flex;
+  margin-left:auto;
+  width:max-content;
+
+}
+
+.lang p {
+  display:flex;
+  margin: 10px;
+}
+
+
+
+.img_container{
+  width:max-content;
+  display:flex;
+  margin:auto;
+  margin:80px auto;
+  padding:0px 30px;
+}
+
+img{
+  height:50px;
+  width:200px;
+  transition:width .5s ease;
+  max-height:95px;
+}
+
+.body{
+  background:whitesmoke;
+  display:flex;
+  height:95vh;
+  background-image: url("https://aleronenergia.hu/assets/images/references/021_PestMegye/thumbnail/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section{
+  border-left: 5px solid whitesmoke;;
+  height:100%;
+  flex: 1;
+  transition:background .8s ease,flex .5s ease;
+  background-color:#151515d1;
+  text-align:center;
+  color:white;
+}
+
+/* .first{
+  background-color:#eee0cb3d;
+  flex: 1;
+} */
+
+/* .second{
+ background-color:#151515d1;
+}
+
+.third{
+ background-color:#151515d1;
+} */
+
+section:hover{
+ flex: 1.5;
+
+  /* max-width: 33.33%; */
+  /* min-width: 20%; */
+  background-color:#15151554;
+}
+
+.title{
+  height: 80px;
+}
+
+.desc{
+  margin-top:10px;
+  height:80px;
+}
+
+button{
+  padding:15px;
+  background-color:#8cc63f4f;
+  border: none;
+  margin: 50px;
+  cursor: pointer;
+  transition:background .4s ease
+
+}
+
+a{
+  transition: border .6s ease;
+  padding-left: 5-px;
+}
+
+button:hover  {
+  background-color:#8cc63f
+}
+
+svg{
+  margin-right: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+.lang p:first-child {
+  border-bottom: 2px solid #8cc63f
+}
+
+.lang p{
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition:border .3s
+}
+
+.lang p:hover {
+  border-bottom: 2px solid #8cc63f
+}
+
+
+@media only screen and (max-width: 800px),
+      only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+      only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+      only screen and (                min-resolution: 2dppx)  and (min-width: 320px)
+ {
+.nav{
+  height:calc(5vh - 4px)
+}
+
+.lang p{
+  margin:10px;
+  margin-top:4px;
+}
+
+  .body {
+    flex-direction: column;
+    height:calc(95vh + 4px)
+   }
+   section{
+    border:none;
+    display: flex;
+    flex: 1
+   }
+   section *{
+     margin:0px !important;
+     height:auto !important;
+   }
+   section:not(:last-child){
+     border-bottom: 2px solid whitesmoke !important;
+   }
+   .second{
+     flex-direction: row-reverse;
+   }
+   .img_container img{
+     margin-top: 30px !important;
+   }
+   section  div:last-child{
+     flex: 1;
+   }
+   section div:last-child *{
+     margin-top: 20px !important;
+   }
+}
+
+@media
+      only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+      only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+      only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+      only screen and (                min-resolution: 2dppx)  and (min-width: 320px)
+ {
+   *{font-size:4vw;}
+   svg{
+     height: 40px;
+      width: 40px;
+   }
+   section div {
+
+     margin:auto 0px  !important;
+   }
+ }
