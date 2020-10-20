@@ -4,9 +4,12 @@
   padding:0;
   margin:0;
   box-sizing:border-box;
+  overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   /* color:black; */
 }
+
+
 
 a{
   text-decoration:none;
@@ -15,7 +18,8 @@ a{
 
 .nav{
   height:6vh;
-  background-color:whitesmoke;
+  background-color:#19181d;
+  color: white;
 
 }
 
@@ -40,6 +44,8 @@ a{
   margin:auto;
   margin:80px auto;
   padding:0px 30px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid whitesmoke;
 }
 
 img{
@@ -50,24 +56,35 @@ img{
 }
 
 .body{
-  background:whitesmoke;
+  background:#19181d;
   display:flex;
-  height:95vh;
-  background-image: url("https://aleronenergia.hu/assets/images/references/021_PestMegye/thumbnail/main.jpg");
+  height:84vh;
+  /* background-image: url("https://aleronenergia.hu/assets/images/references/021_PestMegye/thumbnail/main.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 section{
-  border-left: 5px solid whitesmoke;;
+  margin: 10px;  
   height:100%;
   flex: 1;
   transition:background .8s ease,flex .5s ease;
-  background-color:#151515d1;
+  background-color:#04021a;
   text-align:center;
   color:white;
+  box-shadow: 0px 0px 5px 1px #0a0a0a;
 }
+
+/* section{
+  border-left: 5px solid #19181d;
+  box-shadow: 5px 5px 5px 5px whitesmoke;
+ 
+}
+
+section:last-child{
+  border-right: 5px solid #19181d;
+} */
 
 /* .first{
   background-color:#eee0cb3d;
@@ -87,7 +104,16 @@ section:hover{
 
   /* max-width: 33.33%; */
   /* min-width: 20%; */
-  background-color:#15151554;
+  /* background-color:#15151554; */
+}
+
+.text {
+  transition: fcolor .5s ease;
+  margin: 15px 10px;
+}
+
+section:hover .text{
+  
 }
 
 .title{
@@ -135,7 +161,17 @@ svg{
 }
 
 .lang p:hover {
-  border-bottom: 2px solid #8cc63f
+  border-bottom: 2px solid #8cc63f !important
+}
+
+footer{
+  text-align: center;
+  /* padding: 25px; */
+  background-color:#19181d;
+  color: white;
+  height: 10vh;
+  display: grid;
+  place-content: center;
 }
 
 
@@ -147,8 +183,28 @@ svg{
       only screen and (                min-resolution: 192dpi) and (min-width: 320px),
       only screen and (                min-resolution: 2dppx)  and (min-width: 320px)
  {
+ 
+  section{
+    margin: 10px 0px;
+    font-size: 2.2vw;
+   
+  }
+  section div:last-child{
+    margin: 0px 30px !important;
+  }
+  a{
+  font-size: 2.2vw !important;
+  }
+  section:hover{
+    flex: 1;
+  }
+
+  .img_container{
+    border: none;
+  }
+  
 .nav{
-  height:calc(5vh - 4px)
+  height:calc(5vh )
 }
 
 .lang p{
@@ -158,10 +214,10 @@ svg{
 
   .body {
     flex-direction: column;
-    height:calc(95vh + 4px)
+    height:calc(90vh )
    }
    section{
-    border:none;
+    border:none !important;
     display: flex;
     flex: 1
    }
@@ -169,9 +225,7 @@ svg{
      margin:0px !important;
      height:auto !important;
    }
-   section:not(:last-child){
-     border-bottom: 2px solid whitesmoke !important;
-   }
+  
    .second{
      flex-direction: row-reverse;
    }
@@ -184,7 +238,12 @@ svg{
    section div:last-child *{
      margin-top: 20px !important;
    }
+   footer{
+     height: calc(5vh) !important;
+   }
 }
+
+
 
 @media
       only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
@@ -203,4 +262,18 @@ svg{
 
      margin:auto 0px  !important;
    }
+ }
+
+ @media only screen and (max-width: 500px){
+   section{
+     font-size: 10px !important;
+   }
+   a{
+    font-size: 10px !important;
+   }
+   
+   section *{
+     height: max-content !important;
+   }
+
  }

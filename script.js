@@ -8,10 +8,12 @@ for (var i = 0; i < langs.length; i++) {
 
   langs[i].addEventListener('click', (e) => {
     for (var j = 0; j < langs.length; j++) {
-      langs[j].style.borderBottom = "none"
+      langs[j].style.borderBottom = "none";
+      
     }
     console.log(e.target);
     e.currentTarget.style.borderBottom = "2px solid #8cc63f"
+
   })
 
 }
